@@ -203,16 +203,11 @@ git clone https://github.com/roshankarthik1411/PocketLawyer.git
 
 # 🖼️ **Screenshots**
 
-> 📌 Add screenshots before submission
-> (Replace placeholders below with actual images)
-
-```
-![Home Screen]("C:\Users\anves\OneDrive\Documents\OneDrive\img 1.jpg")
-![Know Your Rights](screenshots/rights.png)
-![Search](screenshots/search.png)
-![Evidence Manager](screenshots/evidence.png)
-![PDF Example](screenshots/pdf.png)
-```
+![Know Your Rights – Police Interaction](https://drive.google.com/file/d/1n87mYeH2bXcWevn-qiY0yC8jkOsDL0qZ/view?usp=drivesdk)
+![Evidence Manager – Saved Evidence](YOUR_IMAGE_URL_HERE)
+![Know Your Rights – Sensitive Cases](YOUR_IMAGE_URL_HERE)
+![Know Your Rights – Police & Arrest](YOUR_IMAGE_URL_HERE)
+![Pocket Lawyer – Home Screen](YOUR_IMAGE_URL_HERE)
 
 ---
 
