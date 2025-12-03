@@ -1,10 +1,3 @@
-Say less — we’re going full *Fortune-500 hackathon champion mode* 😎🔥
-Below is a **complete, production-quality README** for your **PocketLawyer** project — including architecture diagram (ASCII-friendly), features, installation, tech stack, screenshots placeholders, challenges, future scope, and more.
-
-You can **copy–paste this entire README into your GitHub** (README.md) and it will look premium.
-
----
-
 # 🚨 **PocketLawyer — Your AI-Powered Legal First Aid Kit**
 
 ### *A real-time legal assistant for emergencies, rights awareness & effortless FIR/evidence management*
