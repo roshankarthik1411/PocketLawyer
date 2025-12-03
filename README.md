@@ -1,131 +1,280 @@
-# RunAnywhere SDK - Simple Chat App
+Say less — we’re going full *Fortune-500 hackathon champion mode* 😎🔥
+Below is a **complete, production-quality README** for your **PocketLawyer** project — including architecture diagram (ASCII-friendly), features, installation, tech stack, screenshots placeholders, challenges, future scope, and more.
 
-A simple Android chat application demonstrating the RunAnywhere SDK for on-device AI inference.
+You can **copy–paste this entire README into your GitHub** (README.md) and it will look premium.
 
-## What This App Does
+---
 
-This is a minimal example showing how to:
+# 🚨 **PocketLawyer — Your AI-Powered Legal First Aid Kit**
 
-1. Initialize the RunAnywhere SDK
-2. Download AI models (LLMs)
-3. Load models into memory
-4. Run text generation with streaming responses
+### *A real-time legal assistant for emergencies, rights awareness & effortless FIR/evidence management*
 
-## Features
+---
 
-- **Model Management**: Download and load AI models directly in the app
-- **Real-time Streaming**: See AI responses generate word-by-word
-- **Simple UI**: Clean Jetpack Compose interface
-- **On-Device AI**: All inference runs locally on your Android device
+## 🧭 **Table of Contents**
 
-## Quick Start
+* [About the Project](#about-the-project)
+* [Key Features](#key-features)
+* [Core Screens](#core-screens)
+* [Tech Stack](#tech-stack)
+* [Architecture](#architecture)
+* [App Flow Diagram](#app-flow-diagram)
+* [Installation](#installation)
+* [Project Structure](#project-structure)
+* [Screenshots](#screenshots)
+* [Challenges Faced](#challenges-faced)
+* [Future Scope](#future-scope)
+* [Team](#team)
 
-### 1. Build and Run
+---
 
-```bash
-./gradlew assembleDebug
-# Or open in Android Studio and click Run
+# 🧩 **About the Project**
+
+**PocketLawyer** is an AI-assisted legal helper designed to provide instant legal awareness, generate FIR drafts, manage digital evidence, and educate citizens about their rights — **all offline and accessible anytime**.
+
+Our goal is simple:
+👉 **Put the law in everyone’s pocket.**
+
+From roadside police checks to workplace harassment, PocketLawyer gives people:
+
+* The **correct information**
+* In **real time**
+* In **simple language**
+* With **AI-generated PDF summaries**
+
+---
+
+# 🚀 **Key Features**
+
+### **🛡️ Know Your Rights**
+
+* Smart search across all legal categories
+* 7 categories covering 40+ rights
+* Short overview + long detailed PDF explanation
+* Offline first
+* Downloadable multi-page PDF per right
+
+---
+
+### **📝 FIR / Complaint Generator**
+
+* Easy input fields
+* AI-generated FIR format
+* PDF export
+* Share directly with police or legal advisor
+
+*(Optional or future, depending on your build)*
+
+---
+
+### **📁 Evidence Manager**
+
+* Save text notes
+* Add photo/video evidence
+* Easy delete / manage
+* Secure local storage
+
+---
+
+### **🚨 Emergency Action Buttons** *(optional feature)*
+
+* “What to do if stopped by police?”
+* “Emergency harassment help”
+* “Call police 100” shortcut
+* “Auto evidence capture”
+
+---
+
+### **📄 PDF Generator**
+
+* Multi-page PDF generator
+* Automatic text wrapping
+* Bold titles, clean layout
+* Works even offline
+
+---
+
+# 📱 **Core Screens**
+
+| Screen               | Description                      |
+| -------------------- | -------------------------------- |
+| **Home Screen**      | Entry to all major tools         |
+| **Know Your Rights** | Category-based legal rights list |
+| **Search System**    | Smart keyword + semantic search  |
+| **FIR Generator**    | Structured form → Draft FIR      |
+| **Evidence Manager** | Save/delete evidence             |
+| **PDF Viewer**       | Open generated PDFs              |
+
+---
+
+# 🛠️ **Tech Stack**
+
+### **Frontend**
+
+* **Jetpack Compose (Material 3)**
+* Kotlin
+* LiveData / StateFlow
+* LazyColumn, Cards, Composables
+
+### **Backend**
+
+* Local storage (SharedPreferences / Files)
+* Mult-page PDF generator
+* Data models (Kotlin data classes)
+
+### **Build Tools**
+
+* Android Studio
+* Gradle
+* GitHub
+
+---
+
+# 🧱 **Architecture**
+
+A clean, modular structure with reusable components:
+
+```
+PocketLawyer/
+│
+├── app/
+│   ├── data/
+│   │   ├── rights/
+│   │   │   ├── RightsData.kt
+│   │   │   ├── RightItem.kt
+│   │   │
+│   │   └── evidence/
+│   │
+│   ├── ui/
+│   │   ├── screens/
+│   │   │   ├── KnowYourRightsScreen.kt
+│   │   │   ├── EvidenceManagerScreen.kt
+│   │   │   └── FIRScreen.kt
+│   │   │
+│   │   └── components/
+│   │
+│   ├── util/
+│   │    └── PdfGenerator.kt
+│   │
+│   ├── navigation/
+│   │    └── AppNavHost.kt
+│   │
+│   └── MainActivity.kt
+│
+└── README.md
 ```
 
-### 2. Download a Model
+---
 
-1. Launch the app
-2. Tap "Models" in the top bar
-3. Choose a model (we recommend starting with "SmolLM2 360M Q8_0" - only 119 MB)
-4. Tap "Download" and wait for it to complete
-
-### 3. Load the Model
-
-1. Once downloaded, tap "Load" on the model
-2. Wait for "Model loaded! Ready to chat." message
-
-### 4. Start Chatting!
-
-1. Type a message in the text field
-2. Tap "Send"
-3. Watch the AI response generate in real-time
-
-## Available Models
-
-The app comes pre-configured with two models:
-
-| Model | Size | Quality | Best For |
-|-------|------|---------|----------|
-| SmolLM2 360M Q8_0 | 119 MB | Basic | Testing, quick responses |
-| Qwen 2.5 0.5B Instruct Q6_K | 374 MB | Better | General conversations |
-
-## Technical Details
-
-### SDK Components Used
-
-- **RunAnywhere Core SDK**: Component architecture and model management
-- **LlamaCpp Module**: Optimized llama.cpp inference engine with 7 ARM64 variants
-- **Kotlin Coroutines**: For async operations and streaming
-
-### Architecture
+# 🔁 **App Flow Diagram**
 
 ```
-MyApplication (initialization)
-    ↓
-ChatViewModel (state management)
-    ↓
-ChatScreen (UI layer)
+                ┌───────────────┐
+                │   Home Screen  │
+                └───────┬───────┘
+                        │
+     ┌──────────────────┼─────────────────┐
+     │                  │                 │
+     ▼                  ▼                 ▼
+Know Your Rights   Evidence Manager    FIR Generator
+     │                  │                 │
+     ▼                  ▼                 ▼
+ Rights Detail → PDF   Add/Delete     Generate PDF
+     │
+     ▼
+Multi-page PDF Viewer
 ```
 
-### Key Files
+---
 
-- `MyApplication.kt` - SDK initialization and model registration
-- `ChatViewModel.kt` - Business logic and state management
-- `MainActivity.kt` - UI components and composables
+# ⚙️ **Installation**
 
-## Requirements
+### **1️⃣ Clone the repo**
 
-- Android 7.0 (API 24) or higher
-- ~200 MB free storage (for smallest model)
-- Internet connection (for downloading models)
+```
+git clone https://github.com/roshankarthik1411/PocketLawyer.git
+```
 
-## Troubleshooting
+### **2️⃣ Open in Android Studio**
 
-### Models not showing up
+* Open Android Studio
+* Select **Open Existing Project**
+* Choose the **PocketLawyer** folder
 
-- Wait a few seconds for SDK initialization
-- Tap "Refresh" in the Models section
-- Check logcat for initialization errors
+### **3️⃣ Build & Run**
 
-### Download fails
+* Connect Android device
+* Press **Run ▶️**
 
-- Check internet connection
-- Ensure sufficient storage space
-- Verify INTERNET permission in AndroidManifest.xml
+---
 
-### App crashes during generation
+# 🖼️ **Screenshots**
 
-- Try the smaller model (SmolLM2 360M)
-- Close other apps to free memory
-- Check that `largeHeap="true"` is set in AndroidManifest.xml
+> 📌 Add screenshots before submission
+> (Replace placeholders below with actual images)
 
-### Generation is slow
+```
+![Home Screen]("C:\Users\anves\OneDrive\Documents\OneDrive\img 1.jpg")
+![Know Your Rights](screenshots/rights.png)
+![Search](screenshots/search.png)
+![Evidence Manager](screenshots/evidence.png)
+![PDF Example](screenshots/pdf.png)
+```
 
-- This is normal for on-device inference
-- Smaller models run faster
-- Performance depends on device CPU
+---
 
-## Next Steps
+# 🧗‍♂️ **Challenges Faced**
 
-Want to customize this app? Try:
+### 🔹 Offline PDF generation
 
-1. **Add more models** - Edit `MyApplication.kt` → `registerModels()`
-2. **Customize UI** - Edit `MainActivity.kt` compose functions
-3. **Add system prompts** - Modify message format in `ChatViewModel.kt`
-4. **Persist chat history** - Add Room database or DataStore
-5. **Add model parameters** - Explore temperature, top-k, top-p settings
+Handled with custom text wrapping + auto page creation.
 
-## Resources
+### 🔹 Smart search across categories
 
-- [Full Quick Start Guide](app/src/main/java/com/runanywhere/startup_hackathon20/QUICK_START_ANDROID.md)
-- [RunAnywhere SDK Repository](https://github.com/RunanywhereAI/runanywhere-sdks)
-- [SDK Documentation](https://github.com/RunanywhereAI/runanywhere-sdks/blob/main/CLAUDE.md)
+Implemented hybrid search:
 
-## License
+* Title match
+* Body match
+* Category match
+* Token-based match (“police stop” → “Stopped by Police”)
 
-This example app follows the license of the RunAnywhere SDK.
+### 🔹 GitHub conflicts
+
+Solved issues with branch syncing and missing `.git` folder.
+
+### 🔹 Legal content accuracy
+
+Extended RightsData into summaries + fullText for legal validity.
+
+---
+
+# 🌱 **Future Scope**
+
+* AI Chatbot using Gemini / GPT API
+* Voice-to-FIR Generator
+* One-touch SOS with auto evidence
+* Multilingual support (Hindi, Telugu)
+* Cloud backup of evidence
+* Lawyer-connect service
+
+---
+
+# 👥 **Team**
+
+**Roshan Karthik (Lead Developer)**
+
+* Jetpack Compose UI
+* RightsData architecture
+* PDF Generator
+* GitHub deployment
+
+**Anvesh (Android Dev)**
+
+* UI integration
+* Navigation
+* Evidence Manager
+
+---
+
+# 🎉 **Thanks for checking out PocketLawyer!**
+
