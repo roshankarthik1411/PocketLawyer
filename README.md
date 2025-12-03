@@ -203,11 +203,11 @@ git clone https://github.com/roshankarthik1411/PocketLawyer.git
 
 # 🖼️ **Screenshots**
 
-![Know Your Rights – Police Interaction](https://drive.google.com/file/d/1n87mYeH2bXcWevn-qiY0yC8jkOsDL0qZ/view?usp=drivesdk)
-![Evidence Manager – Saved Evidence](YOUR_IMAGE_URL_HERE)
-![Know Your Rights – Sensitive Cases](YOUR_IMAGE_URL_HERE)
-![Know Your Rights – Police & Arrest](YOUR_IMAGE_URL_HERE)
-![Pocket Lawyer – Home Screen](YOUR_IMAGE_URL_HERE)
+![Know Your Rights – Police Interaction](https://image2url.com/images/1764793334585-9a34aefe-e0f8-4428-923e-fdd42b5b4f9d.jpg)
+![Evidence Manager – Saved Evidence](https://image2url.com/images/1764793405115-c9c4408b-abe9-4f18-b4d5-686e16e196c2.jpg)
+![Know Your Rights – Sensitive Cases](https://image2url.com/images/1764793448864-d99e6483-022b-4d73-ae1c-443d8899bd76.jpg)
+![Know Your Rights – Police & Arrest](https://image2url.com/images/1764793504246-946df911-be92-4238-b735-4dca54456707.jpg)
+![Pocket Lawyer – Home Screen](https://image2url.com/images/1764793549138-97b0af09-6fdb-4922-ab51-0f69a12bafdb.jpg)
 
 ---
 
